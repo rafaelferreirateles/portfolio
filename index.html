@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com links para as seções -->
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('sobre-mim')">Sobre Mim</a></li>
+                <li><a href="#" onclick="showSection('formacao')">Formação Educacional</a></li>
+                <li><a href="#" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre-mim">
+        <h2>Sobre Mim</h2>
+        <p>Sou um profissional dedicado, proativo, comunicativo e disposto à crescer junto da impresa</p>
+    </section>
+
+    <!-- Seção Formação Educacional -->
+    <section id="formacao">
+        <h2>Formação Educacional</h2>
+        <p>Graduando em Análise e Desenvolvimento de Sistemas - UNINTER.</p>
+        <p>Curso Básico de Python</p>
+        <p>Curso Básico de Javascript</p>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="projetos">
+            <div class="projeto-item">
+                <h3>Github</h3>
+                <p><a href="https://github.com/rafaelferreirateles?tab=repositories" target="_blank">Clique aqui para visualizar os projetos no github</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Rafael Teles</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Mostrar a seção selecionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Mostrar a primeira seção por padrão
+        showSection('sobre-mim');
+    </script>
+</body>
+</html>
